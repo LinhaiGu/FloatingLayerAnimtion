@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+	
+    <Button 
+        android:id="@+id/btn_show"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="显示浮层"/>
+     <Button 
+        android:id="@+id/btn_hide"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/btn_show"
+        android:text="隐藏浮层"/>
+  
+    
+ 
+
+   
+    <!-- 覆盖层 -->
+
+    <com.example.floatinglayeranimtion.FloatingLayerView
+        android:id="@+id/activity_shine_ll_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_hide"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/holo_blue_dark"
+        android:visibility="visible" >
+
+        <GridView
+            android:id="@+id/activity_shine_gv_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:horizontalSpacing="4dp"
+            android:verticalSpacing="4dp"
+            android:listSelector="@null"
+            android:numColumns="4" >
+        </GridView>
+       
+    </com.example.floatinglayeranimtion.FloatingLayerView>
+
+</RelativeLayout>
